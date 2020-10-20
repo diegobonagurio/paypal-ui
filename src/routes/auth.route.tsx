@@ -6,7 +6,11 @@ import SignIn from '../screens/SignIn';
 const { Navigator, Screen } = createStackNavigator();
 
 const AuthRoutes: React.FC = () => (
-  <Navigator>
+  <Navigator
+    screenOptions={{
+      headerShown: false,
+    }}
+  >
     <Screen name="signin" component={SignIn} />
   </Navigator>
 );
