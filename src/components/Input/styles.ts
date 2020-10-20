@@ -4,7 +4,7 @@ import { colors, sizes, fonts } from '../../constraints';
 export const Container = styled.View`
   width: 100%;
   height: 56px;
-  border: 1px solid ${colors.gray};
+  border: 1px solid ${colors.blackWithOpacity};
   margin-bottom: 16px;
   border-radius: 20px;
 `;

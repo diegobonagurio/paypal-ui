@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png';
 import { Container, Wrapper, Logo } from './styles';
 
 import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 const SignIn: React.FC = () => (
   <Container>
@@ -12,6 +13,8 @@ const SignIn: React.FC = () => (
 
       <Input placeholder="Enter your name or e-mail" />
       <Input placeholder="Password" />
+
+      <Button>Log In</Button>
     </Wrapper>
   </Container>
 );

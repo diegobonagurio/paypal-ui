@@ -2,7 +2,9 @@ import styled from 'styled-components/native';
 import { Platform } from 'react-native';
 import { colors } from '../../constraints';
 
-export const Container = styled.ScrollView`
+export const Container = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false,
+})`
   flex: 1;
   background: ${colors.gray};
   padding: 16px;
