@@ -1,12 +1,19 @@
 import React from 'react';
 import { RectButtonProperties } from 'react-native-gesture-handler';
+import { colors } from '../../constraints';
 
-import { Container, ButtonText } from './styles';
+import { Container, Wrapper, ButtonText } from './styles';
 
 type ButtonProps = RectButtonProperties;
 const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
   <Container {...rest}>
-    <ButtonText>{children}</ButtonText>
+    <Wrapper
+      colors={colors.radialGradient}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 0, y: 1 }}
+    >
+      <ButtonText>{children}</ButtonText>
+    </Wrapper>
   </Container>
 );
 

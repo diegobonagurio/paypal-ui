@@ -1,7 +1,15 @@
 import React from 'react';
 
 import logo from '../../assets/logo.png';
-import { Container, Wrapper, Logo } from './styles';
+import {
+  Container,
+  Wrapper,
+  Logo,
+  HaveProblem,
+  HaveProblemText,
+  SignUp,
+  SignUpText,
+} from './styles';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -15,6 +23,13 @@ const SignIn: React.FC = () => (
       <Input placeholder="Password" />
 
       <Button>Log In</Button>
+
+      <HaveProblem>
+        <HaveProblemText>Having trouble logging in?</HaveProblemText>
+      </HaveProblem>
+      <SignUp>
+        <SignUpText>Sign Up</SignUpText>
+      </SignUp>
     </Wrapper>
   </Container>
 );
