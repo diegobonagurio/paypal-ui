@@ -1,3 +1,5 @@
+import { ms } from 'react-native-size-matters';
+
 export const colors = {
   white: '#fff',
   gray: '#f5f7fa',
@@ -10,9 +12,18 @@ export const colors = {
 };
 
 export const sizes = {
-  small: 12,
-  regular: 16,
-  bold: 16,
+  small: `${ms(12)}px`,
+  regular: `${ms(16)}px`,
+  bold: `${ms(16)}px`,
+};
+
+export const spacings = {
+  eight: `${ms(8)}px`,
+  sixteen: `${ms(16)}px`,
+  twentyFour: `${ms(24)}px`,
+  thirtyTwo: `${ms(32)}px`,
+  forty: `${ms(40)}px`,
+  fiftyEight: `${ms(48)}px`,
 };
 
 export const fonts = {

@@ -1,12 +1,14 @@
 import styled from 'styled-components/native';
+import { ms } from 'react-native-size-matters';
+
 import { colors, sizes, fonts } from '../../constraints';
 
 export const Container = styled.View`
   width: 100%;
-  height: 56px;
+  height: ${ms(56)}px;
   border: 1px solid ${colors.blackWithOpacity};
-  margin-bottom: 16px;
-  border-radius: 20px;
+  margin-bottom: ${ms(16)}px;
+  border-radius: ${ms(20)}px;
 `;
 
 export const TextInput = styled.TextInput`
@@ -14,5 +16,5 @@ export const TextInput = styled.TextInput`
   text-align: center;
   color: ${colors.black};
   font-family: ${fonts.ManropeRegular};
-  font-size: ${sizes.small}px;
+  font-size: ${sizes.small};
 `;

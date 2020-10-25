@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 import { Platform } from 'react-native';
+import { ms } from 'react-native-size-matters';
+
 import { colors, sizes, fonts } from '../../constraints';
 
 export const Container = styled.ScrollView.attrs({
@@ -7,7 +9,7 @@ export const Container = styled.ScrollView.attrs({
 })`
   flex: 1;
   background: ${colors.gray};
-  padding: 16px;
+  padding: ${ms(16)}px;
 `;
 
 export const Wrapper = styled.KeyboardAvoidingView.attrs({
@@ -19,22 +21,23 @@ export const Wrapper = styled.KeyboardAvoidingView.attrs({
 `;
 
 export const Logo = styled.Image`
-  margin-top: 32px;
-  margin-bottom: 98px;
+  margin-top: ${ms(32)}px;
+  margin-bottom: ${ms(98)}px;
 `;
 
 export const HaveProblem = styled.TouchableNativeFeedback``;
 export const HaveProblemText = styled.Text`
   color: ${colors.blackWithOpacity};
   font-family: ${fonts.ManropeRegular};
-  font-size: ${sizes.small}px;
-  margin: 32px 0px;
+  font-size: ${sizes.small};
+  margin-top: ${ms(32)}px;
+  margin-bottom: ${ms(32)}px;
 `;
 
 export const SignUp = styled.TouchableNativeFeedback``;
 export const SignUpText = styled.Text`
   color: ${colors.blackWithOpacity};
   font-family: ${fonts.ManropeRegular};
-  font-size: ${sizes.small}px;
-  margin-bottom: 32px;
+  font-size: ${sizes.small};
+  margin-bottom: ${ms(32)}px;
 `;
