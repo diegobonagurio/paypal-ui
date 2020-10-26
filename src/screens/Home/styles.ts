@@ -81,3 +81,29 @@ export const CardText = styled.Text<CardProps>`
   font-size: ${sizes.small};
   margin-top: ${spacings.twentyFour};
 `;
+
+export const Heading = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+`;
+
+export const Title = styled.Text`
+  color: ${colors.black};
+  font-weight: bold;
+  font-family: ${fonts.ManropeRegular};
+  font-size: ${sizes.bold};
+`;
+
+export const Subtitle = styled.Text`
+  color: ${colors.blackWithOpacity};
+  font-family: ${fonts.ManropeRegular};
+  font-size: ${sizes.small};
+`;
+
+export const Content = styled.View`
+  padding: 32px;
+`;

@@ -14,14 +14,22 @@ import {
   Welcome,
   Balance,
   BalanceText,
+  Heading,
+  Title,
+  Subtitle,
+  Content,
   Menu,
   Card,
   CardText,
 } from './styles';
 
+import ActivityItem from '../../components/ActivityItem';
+
 import logoSmall from '../../assets/logo-small.png';
 import shadowPaypal from '../../assets/shadow.png';
 import avatar from '../../assets/avatar.png';
+
+import { transactions } from '../../data';
 
 const Home: React.FC = () => {
   const [selected, setSelected] = useState<String>('');
@@ -109,6 +117,17 @@ const Home: React.FC = () => {
           color={colors.blackWithOpacity}
         />
       </Menu>
+
+      <Heading>
+        <Title>Activity</Title>
+        <Subtitle>View All</Subtitle>
+      </Heading>
+
+      <Content>
+        {transactions.map((transaction) => (
+          <ActivityItem data={transaction} key={transaction.id} />
+        ))}
+      </Content>
     </Container>
   );
 };
