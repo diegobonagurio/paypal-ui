@@ -1,21 +1,56 @@
 import styled from 'styled-components/native';
-import { Platform } from 'react-native';
 import { ms } from 'react-native-size-matters';
-
-import { colors } from '../../constraints';
+import LinearGradient from 'react-native-linear-gradient';
+import { colors, fonts, sizes, spacings } from '../../constraints';
 
 export const Container = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })`
   flex: 1;
   background: ${colors.gray};
-  padding: ${ms(16)}px;
 `;
 
-export const Wrapper = styled.KeyboardAvoidingView.attrs({
-  behavior: Platform.OS === 'ios' ? 'padding' : undefined,
-})`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+export const Wrapper = styled(LinearGradient)`
+  border-bottom-right-radius: ${ms(41)}px;
+  height: ${ms(272)}px;
+`;
+export const Header = styled.ImageBackground`
+  padding: ${ms(16)}px;
+  height: ${ms(272)}px;
+`;
+
+export const HeaderWrapper = styled.View`
+  margin-top: ${spacings.sixteen};
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Logo = styled.Image``;
+
+export const Avatar = styled.Image`
+  width: ${ms(52)}px;
+  height: ${ms(52)}px;
+  border-radius: 20px;
+  border: ${ms(1)}px solid ${colors.primary};
+`;
+
+export const Welcome = styled.Text`
+  color: #5b91c8;
+  font-family: ${fonts.ManropeRegular};
+  font-size: ${sizes.regular};
+  margin-top: ${spacings.twentyFour};
+  margin-bottom: ${spacings.thirtyTwo};
+`;
+
+export const Balance = styled.Text`
+  color: ${colors.white};
+  font-family: ${fonts.ManropeSemiBold};
+  font-size: ${sizes.big};
+`;
+
+export const BalanceText = styled.Text`
+  color: ${colors.white};
+  font-family: ${fonts.ManropeRegular};
+  font-size: ${sizes.regular};
+  margin-top: ${spacings.eight};
 `;

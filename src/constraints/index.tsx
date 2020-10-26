@@ -15,6 +15,7 @@ export const sizes = {
   small: `${ms(12)}px`,
   regular: `${ms(16)}px`,
   bold: `${ms(16)}px`,
+  big: `${ms(40)}px`,
 };
 
 export const spacings = {
