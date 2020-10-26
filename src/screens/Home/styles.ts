@@ -3,6 +3,10 @@ import { ms } from 'react-native-size-matters';
 import LinearGradient from 'react-native-linear-gradient';
 import { colors, fonts, sizes, spacings } from '../../constraints';
 
+interface CardProps {
+  selected: boolean;
+}
+
 export const Container = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })`
@@ -31,7 +35,6 @@ export const Avatar = styled.Image`
   width: ${ms(52)}px;
   height: ${ms(52)}px;
   border-radius: 20px;
-  border: ${ms(1)}px solid ${colors.primary};
 `;
 
 export const Welcome = styled.Text`
@@ -53,4 +56,28 @@ export const BalanceText = styled.Text`
   font-family: ${fonts.ManropeRegular};
   font-size: ${sizes.regular};
   margin-top: ${spacings.eight};
+`;
+
+export const Menu = styled.View`
+  margin-top: ${spacings.twentyFour};
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const Card = styled(LinearGradient)`
+  height: ${ms(120)}px;
+  width: ${ms(107)}px;
+
+  border-radius: 20px;
+  padding: ${ms(20)}px;
+  margin-left: ${spacings.sixteen};
+  margin-right: ${spacings.sixteen};
+`;
+
+export const CardText = styled.Text<CardProps>`
+  max-width: ${ms(60)}px;
+  color: ${({ selected }) => (selected ? colors.white : colors.primary)};
+  font-family: ${fonts.ManropeSemiBold};
+  font-size: ${sizes.small};
+  margin-top: ${spacings.twentyFour};
 `;
