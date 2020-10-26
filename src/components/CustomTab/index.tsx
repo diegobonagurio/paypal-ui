@@ -8,9 +8,7 @@ interface CustomProps {
   text: string;
 }
 
-const CustomTab: React.FC<CustomProps> = ({
- size, color, text, children
-}) => (
+const CustomTab: React.FC<CustomProps> = ({ size, color, text, children }) => (
   <Container>
     {children}
     <Label size={size} color={color}>

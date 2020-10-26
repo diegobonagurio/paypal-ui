@@ -1,9 +1,10 @@
 import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { colors } from '../constraints';
 
 import Home from '../screens/Home';
 
@@ -14,13 +15,13 @@ const icons: any = {
     icon: 'home',
     lib: Feather,
   },
-  Users: {
+  Contacts: {
     icon: 'users',
     lib: Feather,
   },
   Wallet: {
-    icon: 'account-balance-wallet',
-    lib: MaterialIcons,
+    icon: 'wallet-outline',
+    lib: Ionicons,
   },
   Settings: {
     icon: 'settings',
@@ -33,6 +34,8 @@ const AppRoutes: React.FC = () => (
   <Navigator
     tabBarOptions={{
       showLabel: false,
+      activeTintColor: colors.primary,
+      inactiveTintColor: colors.black,
     }}
     screenOptions={({ route }) => ({
       tabBarIcon: ({ size, color, focused }) => {
@@ -51,7 +54,7 @@ const AppRoutes: React.FC = () => (
     })}
   >
     <Screen name="Home" component={Home} />
-    <Screen name="Users" component={View} />
+    <Screen name="Contacts" component={View} />
     <Screen name="Wallet" component={View} />
     <Screen name="Settings" component={View} />
   </Navigator>
